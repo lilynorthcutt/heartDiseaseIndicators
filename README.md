@@ -5,9 +5,9 @@
   <h2 align="center">Heart Disease Indicators by Sex</h2>
 
   <p align="center">
-    Heart Disease refers to multiple heart conditions, the most common being coronary artery disease (CAD). Heart disease, causing 1 in 4 deaths, is the leading cause of death in the United States.
-Gender disparities in studying CAD throughout history are well documented and frequent. This can lead to unequal treatment and diagnosis for patients based on gender.
-This project aims to identify indicators for heart disease, and understanding how patient sex plays a role in indicators and identifying indicators.
+    Heart disease is a leading cause of death in the United States. Gender disparities in studying heart disease throughout history are well documented and frequent. This can lead to unequal treatment and diagnosis for patients based on gender.
+
+This project identifies indicators for heart disease, and understanding how patient sex plays a role in which indicators to focus on for diagnosis.
     <br />
     <br />
     :heart:
@@ -18,10 +18,22 @@ This project aims to identify indicators for heart disease, and understanding ho
 
 
 
-### Quick Links
+### Summary 
+For an in-depth look at my analysis and write-up, please go [here](writeup.md).
 
-* [Code and Analysis](writeup.md)
-* [Data Source](https://archive.ics.uci.edu/dataset/45/heart+disease)
+The data can be accessed [here](https://archive.ics.uci.edu/dataset/45/heart+disease).
+
+This project explores heart disease indicators with a focus on gender disparities using decision tree models. My primary questions are:
+
+1. How do heart disease indicators differ between men and women?
+2. Which indicators are most significant for predicting heart disease in each sex?
+3. How can we ensure equal representation of women in medical research?
+
+By analyzing a heart disease dataset, I built decision trees to uncover patterns in symptoms and risk factors. The results reveal distinct differences in how heart disease presents itself in men and women, highlighting the need for gender-specific diagnostic criteria. 
+
+Notably, the decision tree trained on the entire dataset did not effectively cover women. It shared many features with the male decision tree, while the female decision tree relied on only one feature before making a classification. Furthermore, the full decision tree incorrectly classified 50% of women who had heart disease, underscoring the inadequacy of current models.
+
+This analysis emphasizes the importance of including equal numbers of male and female participants in medical studies, as well as creating accuracy metrics that account for both groups individually. Future work will focus on exploring additional models, incorporating more diverse data sources, and optimizing our models with cross-validation techniques.
 
 ### References
 Centers for Disease Control and Prevention. (2021, January 19). Heart disease. Centers for Disease Control
