@@ -16,14 +16,16 @@ This project identifies indicators for heart disease, and understanding how pati
   
 </div>
 
+### Quick Links:
+
+* [Analysis]((writeup.md) Take a look at my code and analysis!
+* [Data Source](https://archive.ics.uci.edu/dataset/45/heart+disease)
 
 
 ### Summary 
-For an in-depth look at my analysis and write-up, please go [here](writeup.md).
+__This project explores heart disease indicators with a focus on gender disparities using decision tree models.__
 
-The data can be accessed [here](https://archive.ics.uci.edu/dataset/45/heart+disease).
-
-This project explores heart disease indicators with a focus on gender disparities using decision tree models. My primary questions are:
+My primary questions are:
 
 1. How do heart disease indicators differ between men and women?
 2. Which indicators are most significant for predicting heart disease in each sex?
@@ -31,7 +33,7 @@ This project explores heart disease indicators with a focus on gender disparitie
 
 By analyzing a heart disease dataset, I built decision trees to uncover patterns in symptoms and risk factors. The results reveal distinct differences in how heart disease presents itself in men and women, highlighting the need for gender-specific diagnostic criteria. 
 
-Notably, the decision tree trained on the entire dataset did not effectively cover women. It shared many features with the male decision tree, while the female decision tree relied on only one feature before making a classification. Furthermore, the full decision tree incorrectly classified 50% of women who had heart disease, underscoring the inadequacy of current models.
+Notably, the decision tree trained on the entire dataset __did not effectively cover women__. In fact, it __incorrectly classified 50% of women who actually had heart disease,__ underscoring the inadequacy of the models. By training individual decision trees by sex, we immediately see the difference in which indicators are most important for men and women, and they are not the same. __The decision tree trained on women achieves an accuracy of 80%__ and illustrates the stark difference in which indicators medical professionals must focus on depending on sex.
 
 This analysis emphasizes the importance of including equal numbers of male and female participants in medical studies, as well as creating accuracy metrics that account for both groups individually. Future work will focus on exploring additional models, incorporating more diverse data sources, and optimizing our models with cross-validation techniques.
 
