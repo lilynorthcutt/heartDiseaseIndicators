@@ -18,7 +18,7 @@ This project identifies indicators for heart disease, and understanding how pati
 
 ### Quick Links:
 
-* [Analysis]((writeup.md) Take a look at my code and analysis!
+* [Analysis](writeup.md) Take a look at my code and analysis!
 * [Data Source](https://archive.ics.uci.edu/dataset/45/heart+disease)
 
 
