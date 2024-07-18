@@ -20,7 +20,7 @@ This project aims to identify indicators for heart disease, and understanding ho
 
 ### Quick Links
 
-* View my code and findings [here](https://github.com/lilynorthcutt/heartDiseaseIndicators/writeup.Rmd)
+* View my code and findings [here](writeup.Rmd)
 * View the source of the data [here](https://archive.ics.uci.edu/dataset/45/heart+disease)
 
 ### References
