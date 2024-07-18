@@ -20,8 +20,8 @@ This project aims to identify indicators for heart disease, and understanding ho
 
 ### Quick Links
 
-* View my code and findings [here](writeup.Rmd)
-* View the source of the data [here](https://archive.ics.uci.edu/dataset/45/heart+disease)
+* [Code and Analysis](writeup.md)
+* [Data Source](https://archive.ics.uci.edu/dataset/45/heart+disease)
 
 ### References
 Centers for Disease Control and Prevention. (2021, January 19). Heart disease. Centers for Disease Control

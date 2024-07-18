@@ -2,7 +2,7 @@ Heart Disease Indicators by Sex
 ================
 2024-07-18
 
-### Introduction
+## Introduction
 
 Heart disease is a leading cause of mortality worldwide, yet significant
 gender disparities exist in its study and treatment. Historically,
@@ -59,7 +59,7 @@ The data consists of 14 columns, including `num` which is our heart
 disease number. Two of these columns have `NA` values: `ca` and `thal`.
 Lets clean up the data and start exploring what we have.
 
-### Data Cleaning and Initial Observations
+## Data Cleaning and Initial Observations
 
 First, let’s label the data in an easier way to understand for `num`
 (heart disease), and `sex`.
@@ -119,15 +119,17 @@ df %>% select(-num) %>% mutate_at(vars(-sex, -heart_disease), normalize)%>%
   group_by(sex, heart_disease) %>%  summarise_all(mean) %>%  ungroup() %>% 
   pivot_longer(cols= !c("sex", "heart_disease"), names_to = 'feature', values_to = 'mean') %>% 
   ggplot()+
-  geom_point(aes(x = feature, y = mean, color = sex))+coord_flip()+facet_wrap(.~heart_disease)+ xlab("")+ylab("Normalized Mean")
+  geom_point(aes(x = feature, y = mean, color = sex))+coord_flip()+facet_wrap(.~heart_disease)+ xlab("")+ylab("Normalized Mean")+
+  ggtitle("Feature Means Split By Heart Disease Present vs. None")
 ```
 
-![](writeup_files/figure-gfm/unnamed-chunk-4-1.png)<!-- --> During the
-data cleaning process, six data points were removed due to missing
-information. While imputation methods could be considered to address
-this issue, for the purpose of this project, I have chosen to omit this
-step. The primary goal here is to understand the impact of sex on
-predicting heart disease, rather than achieving the highest possible
+![](writeup_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+During the data cleaning process, six data points were removed due to
+missing information. While imputation methods could be considered to
+address this issue, for the purpose of this project, I have chosen to
+omit this step. The primary goal here is to understand the impact of sex
+on predicting heart disease, rather than achieving the highest possible
 prediction accuracy.
 
 An initial review of the dataset reveals a significant gender imbalance,
@@ -143,3 +145,49 @@ certain features, such as `thal`, `oldpeak`, and `exang`, display
 distinct variations between men and women. This suggests that the same
 approach to finding heart disease indicators may not be equally
 effective for both men and women.
+
+## Decision Tree Models
+
+Bringing it back to our original goal, to explore how sex plays a role
+in heart disease indicators, I am going to look at a series of decision
+trees.
+
+### Why Decision Trees?
+
+Decision trees may not always be the best models that give the highest
+predictive accuracy, however I think are a great model to use to help us
+understand our problem at hand.
+
+Decision trees are easy to understand and interpret, making the logic
+behind the predictions clear. This transparency is particularly valuable
+in the medical field, where it is crucial to explain why certain
+features are indicative of heart disease. Unlike more complex models
+such as neural networks, decision trees do not require dimensionality
+reduction, and they can directly use the original features of the
+dataset. This simplicity helps maintain the medical terminology and
+context, making the results more accessible and actionable for
+healthcare professionals.
+
+### Building the Models
+
+To understand how women and men are represented within the model, lets
+build three decision trees:
+
+1.  **Full Tree:** This tree will be built using the training set from
+    all the data.
+2.  **Male Tree:** This tree will be built using the training set from
+    the data filtered to `sex == 'male'`.
+3.  **Female Tree:** This tree will be built using the training set from
+    the data filtered to `sex == 'female'`
+
+All trees will use a 70/30 training/test split, and use the gini index
+within the tree.
+
+> I will not be performing any hyper-parameter tuning in this project.
+> Please take a look at a one of my more in-depth project, such as [this
+> one](https://github.com/lilynorthcutt/sierraNevadaAge), if you are
+> interested in this.
+
+## Results and Discussion
+
+## Conclusion and Future Work
