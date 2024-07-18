@@ -1,14 +1,22 @@
-<a href="https://github.com/lilynorthcutt/heartDiseaseIndicators">
-    <img src="img/heart_banner.jpeg" alt="Logo" >
-  </a>
 
+<!-- PROJECT LOGO AND INTRO SECTION -->
+<br />
+<div align="center">
+  <h2 align="center">Heart Disease Indicators by Sex</h2>
 
-## Heart Disease Indicators by Sex
-Heart Disease refers to multiple heart conditions, the most common being coronary artery disease (CAD). Heart disease, causing 1 in 4 deaths, is the leading cause of death in the United States.
-    
+  <p align="center">
+    Heart Disease refers to multiple heart conditions, the most common being coronary artery disease (CAD). Heart disease, causing 1 in 4 deaths, is the leading cause of death in the United States.
 Gender disparities in studying CAD throughout history are well documented and frequent. This can lead to unequal treatment and diagnosis for patients based on gender.
-    
 This project aims to identify indicators for heart disease, and understanding how patient sex plays a role in indicators and identifying indicators.
+    <br />
+    <br />
+    :heart:
+    
+  </p>
+  
+</div>
+
+
 
 ### Quick Links
 
