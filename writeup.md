@@ -267,8 +267,9 @@ Let’s start by taking a look at the full tree:
 rpart.plot(full_tree, main = "Full Decision Tree (includes both sexes)")
 ```
 
-![](writeup_files/figure-gfm/unnamed-chunk-7-1.png)<!-- --> According to
-our tree, the most important feature is `cp` (Chest Pain Type (integers
+![](writeup_files/figure-gfm/unnamed-chunk-7-1.png)<!-- --> 
+
+According to our tree, the most important feature is `cp` (Chest Pain Type (integers
 1 - 4) where categories 1 through 3 present symptoms, while 4 is
 asymptomatic):
 
@@ -328,8 +329,8 @@ people with heart disease 31 were correctly identified and 13 were very
 unfortunately not found. Of the 13 people the model missed, 8 were men
 and 5 were women.
 
-\_The model failed to identify 50% of women with heart disease and 23.5%
-of men with heart disease\_\_.
+__The model failed to identify 50% of women with heart disease and 23.5%
+of men with heart disease.__
 
 ### Sex Based Trees
 
@@ -394,6 +395,7 @@ cm_w$table
 test_w$pred <- predictions_female
 test_m$pred <- predictions_male
 ```
+
 
 Interestingly enough, the male tree accuracy is lower than the full tree
 (two additional individuals are incorrectly undiagnosed), but that the
