@@ -347,8 +347,9 @@ rpart.plot(male_tree, main = "Male Decision Tree")
 rpart.plot(female_tree, main = "Female Decision Tree")
 ```
 
-![](writeup_files/figure-gfm/unnamed-chunk-10-1.png)<!-- --> Immediately
-the difference becomes evident. We can see that the male decision tree
+![](writeup_files/figure-gfm/unnamed-chunk-10-1.png)<!-- --> 
+
+Immediately the difference becomes evident. We can see that the male decision tree
 is almost identical to the full decision tree, with the replacement of
 `thal` with `thalach` (and of course removing the sex factor). But the
 female decision tree simply looks at one indicator for heart disease.
